@@ -18,7 +18,7 @@ public class ATM
    private Screen screen; // ATM's screen
    private Keypad keypad; // ATM's keypad
    private CashDispenser cashDispenser; // ATM's cash dispenser
-   private DepositSlot depositSlot; // ATM's deposit slot
+   private Deposit depositSlot; // ATM's deposit slot
    private BankDatabase bankDatabase; // account information database
    private int AdminCheck;
    private String userinput = "";
@@ -43,7 +43,7 @@ public class ATM
       keypad = new Keypad(); // create keypad 
       
       cashDispenser = new CashDispenser(); // create cash dispenser
-      depositSlot = new DepositSlot(); // create deposit slot
+      depositSlot = new Deposit(AdminCheck, screen, bankDatabase, keypad, depositSlot); // create deposit slot
       bankDatabase = new BankDatabase(); // create acct info database
    } // end no-argument ATM constructor
 

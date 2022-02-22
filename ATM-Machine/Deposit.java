@@ -10,13 +10,13 @@ public class Deposit extends Transaction
 {
    private double amount; // amount to deposit
    private Keypad keypad; // reference to keypad
-   private DepositSlot depositSlot; // reference to deposit slot
+   private Deposit depositSlot; // reference to deposit slot
    private final static int CANCELED = 0; // constant for cancel option
 
    // Deposit constructor
    public Deposit(int userAccountNumber, Screen atmScreen, 
       BankDatabase atmBankDatabase, Keypad atmKeypad, 
-      DepositSlot atmDepositSlot)
+      Deposit atmDepositSlot)
    {
       // initialize superclass variables
       super(userAccountNumber, atmScreen, atmBankDatabase);
@@ -69,7 +69,12 @@ public class Deposit extends Transaction
       } // end else
    } // end method execute
 
-   // prompt user to enter a deposit amount in cents 
+   private boolean isEnvelopeReceived() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+// prompt user to enter a deposit amount in cents 
    private void promptForDepositAmount()
    {
       Screen screen = getScreen(); // get reference to screen
