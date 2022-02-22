@@ -17,17 +17,17 @@ public class GuessingGame  {
             count++;
         }  
     }
-    public static String determineGuess(int userAnswer, int computerNumber, int count){
-        if (userAnswer <=0 || userAnswer >100) {
+    public static String determineGuess(int userReponse, int computerNumber, int count){
+        if (userReponse <=0 || userReponse >100) {
             return "Your guess is invalid";
         }
-        else if (userAnswer == computerNumber ){
+        else if (userReponse == computerNumber ){
             return "Correct!\nTotal Guesses: " + count;
         }
-        else if (userAnswer > computerNumber) {
+        else if (userReponse > computerNumber) {
             return "Your guess is too high, try again.\nTry Number: " + count;
         }
-        else if (userAnswer < computerNumber) {
+        else if (userReponse < computerNumber) {
             return "Your guess is too low, try again.\nTry Number: " + count;
         }
         else {
