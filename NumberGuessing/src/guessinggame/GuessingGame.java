@@ -1,6 +1,8 @@
 package guessinggame;
 import javax.swing.*;
 
+
+// These changes are made by Masoud Taheri
 public class GuessingGame  {
     public static void main(String[] args) {
         int ComputerNumber = (int) (Math.random()*100 + 1);
